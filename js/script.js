@@ -81,7 +81,41 @@ btnEl.addEventListener('click', function(){
 
 // PARI O DISPARI
 
+// valorizzo una variabile per determinare se l'utente ha scelto pari o dispari
+// se choice=true ha scelto pari
+// se choice=false ha scelto dispari
+let even;
 
+btnEvenEl.addEventListener('click', function(){
+    // ha scelto pari
+    even = true;
+    outputChoiceEl.innerText = 'Hai scelto Pari';
+});
+
+btnOddEl.addEventListener('click', function(){
+    // ha scelto dispari
+    even = false;
+    outputChoiceEl.innerText = 'Hai scelto Dispari';
+});
+
+
+btnCheckOddEvenEl.addEventListener('click', function(){
+    // - creo una variabile che contenga la somma tra il numero generato dal pc randomicamente e quello scelto dall'utente;
+    let pcNum = randomNumber();
+    let sum = parseInt(inputNumberEl.value) + pcNum;
+
+    // ? SE: l'utente ha scelto pari e la somma è pari
+    if(even==true && checkEvenOdd(sum)==true){
+        // °V1: Stampa che ha vinto l'utente
+        outputOddEvenEl.innerText = `Hai scelto ${parseInt(inputNumberEl.value)}, il pc ha scelto ${pcNum}, la somma è ${sum}, quindi hai vinto!`;
+    } else if(even==false && checkEvenOdd(sum)==false){
+        // °V1: Stampa che ha vinto l'utente
+        outputOddEvenEl.innerText = `Hai scelto ${parseInt(inputNumberEl.value)}, il pc ha scelto ${pcNum}, la somma è ${sum}, quindi hai vinto!`;
+    } else {
+        // °F1: Stampa che ha vinto il PC;
+        outputOddEvenEl.innerText = `Hai scelto ${parseInt(inputNumberEl.value)}, il pc ha scelto ${pcNum}, la somma è ${sum}, quindi hai perso :(`;
+    }
+});
 
 
 
@@ -114,6 +148,7 @@ function checkPali(word){
     }
 }
 
+// NUMERO CASUALE DA 1 A 5
 /**
  * Genera un numero random da 1 a 5
  * @returns {number}
@@ -122,8 +157,10 @@ function randomNumber(){
     return Math.floor(Math.random()* 5 + 1);
 }
 
+// PARI O DISPARI
 /**
  * Controlla se il numero passato come parametro è pari o dispari
+ * se pari restituisce true, se dispari restituisce false
  * @param {number} num
  * @returns {boolean} true|false
  */
