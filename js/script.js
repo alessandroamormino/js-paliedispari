@@ -57,12 +57,21 @@
 
 // CODE
 
-const inputEl = document.getElementById('word');
+// VARIABLES
+const inputWordEl = document.getElementById('word');
 const btnEl = document.getElementById('check-pali');
 const outputEl = document.getElementById('output-pali');
+const inputNumberEl = document.getElementById('number');
+const btnEvenEl = document.getElementById('btn-even');
+const btnOddEl = document.getElementById('btn-odd');
+const outputChoiceEl = document.getElementById('output-choice');
+const btnCheckOddEvenEl = document.getElementById('check-odd-even');
+const outputOddEvenEl = document.getElementById('output-number');
 
+
+// PALINDROMA
 btnEl.addEventListener('click', function(){
-    if(checkPali(inputEl.value)){
+    if(checkPali(inputWordEl.value)){
         outputEl.innerText = 'È palindroma!';
     } else{
         outputEl.innerText = 'Non è palindroma.';
@@ -70,6 +79,7 @@ btnEl.addEventListener('click', function(){
 });
 
 
+// PARI O DISPARI
 
 
 
@@ -104,4 +114,23 @@ function checkPali(word){
     }
 }
 
+/**
+ * Genera un numero random da 1 a 5
+ * @returns {number}
+ */
+function randomNumber(){
+    return Math.floor(Math.random()* 5 + 1);
+}
 
+/**
+ * Controlla se il numero passato come parametro è pari o dispari
+ * @param {number} num
+ * @returns {boolean} true|false
+ */
+function checkEvenOdd(num){
+    if(num % 2 == 0){
+        return true;
+    } else {
+        return false;
+    }
+}
