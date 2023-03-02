@@ -32,3 +32,45 @@
 */
 
 
+// CODE
+
+const inputEl = document.getElementById('word');
+const btnEl = document.getElementById('check-pali');
+const outputEl = document.getElementById('output');
+
+btnEl.addEventListener('click', function(){
+    if(checkPali(inputEl.value)){
+        outputEl.innerText = 'È palindroma!';
+    } else{
+        outputEl.innerText = 'Non è palindroma.';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *********** FUNCTIONS ************ */
+function checkPali(word){
+    // nel caso l'utente inserisca una frase con degli spazi prima elimino gli spazi
+    let wordReverse = word.replace(/\s+/g, '');
+
+    // creo una nuova stringa invertendo tutti i caratteri della parola data come parametro
+    wordReverse = wordReverse.split('');
+    wordReverse = wordReverse.reverse().join('');
+    
+    // controllo se la parola iniziale (senza spazi) è uguale a quella invertita
+    if(word.replace(/\s+/g, '')===wordReverse){
+        return true;
+    }else{
+        return false;
+    }
+}
