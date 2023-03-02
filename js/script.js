@@ -29,6 +29,29 @@
 - richiamo la funzione e la faccio eseguire solo al click del bottone
 - stampo il risultato in un div di output
 
+
+2) Pari e Dispari
+- seleziono l'input dell'utente che conterrà il numero
+- seleziono il bottone che farà partire il controllo
+- seleziono i bottoni pari e dispari per la scelta dell'utente
+- creo una funzione che generi un numero random da 1 a 5
+    FUNCTION: 
+        - uso solo math.random() con un limite da 1 a 5 e restituisco il valore, non mi serve alcun parametro;
+- al click del bottone: 
+    - creo una variabile che contenga la somma tra il numero generato dal pc randomicamente e quello scelto dall'utente;
+    - creo una funzione che controlli se un numero è pari o dispari
+        FUNCTION: 
+            - deve ricevere un parametro
+            ? SE il resto della divisione tra parametro e 2 è maggiore di 0
+                °V1: Il numero è pari quindi la funzione restituisce true;
+            : ALTRIMENTI 
+                °F1: Il numero è dispari quindi la funzione restituisce false;
+    ? SE: l'utente ha scelto pari e la somma è pari
+        °V1: Stampa che ha vinto l'utente
+    :? ALTRIMENTI SE l'utente ha scelto dispari e la sommma è dispari
+        °V1: Stampa che ha vinto l'utente
+    : ALTRIMENTI
+        °F1: Stampa che ha vinto il PC;
 */
 
 
@@ -36,7 +59,7 @@
 
 const inputEl = document.getElementById('word');
 const btnEl = document.getElementById('check-pali');
-const outputEl = document.getElementById('output');
+const outputEl = document.getElementById('output-pali');
 
 btnEl.addEventListener('click', function(){
     if(checkPali(inputEl.value)){
@@ -59,6 +82,12 @@ btnEl.addEventListener('click', function(){
 
 
 /* *********** FUNCTIONS ************ */
+/**
+ * Controlla se la parola inserita come parametro è palindroma
+ * @param {string} word
+ * @returns {boolean} true | false
+ */
+// PAROLA PALINDROMA
 function checkPali(word){
     // nel caso l'utente inserisca una frase con degli spazi prima elimino gli spazi
     let wordReverse = word.replace(/\s+/g, '');
@@ -74,3 +103,5 @@ function checkPali(word){
         return false;
     }
 }
+
+
