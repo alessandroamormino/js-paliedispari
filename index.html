@@ -27,13 +27,24 @@
         </div>
     </div>
 
+    <div class="spacer container-centered"></div>
 
-    <input type="number" id="number" min="1" max="5">
-    <button id="btn-even">Pari</button>
-    <button id="btn-odd">Dispari</button>
-    <div id="output-choice"></div>
-    <button id="check-odd-even">Controlla</button>
-    <div id="output-number"></div>
+    <div class="even-odd-container container-centered">
+        <h2>Pari o dispari?</h2>
+        <article class="description">
+            <p>Quando due persone devono scegliere ad esempio chi comincia a un gioco, con “Pari o dispari?” aprono ciascuna un certo numero di dita e le sommano. Se la somma è pari vince chi ha scelto pari. Se è dispari vince chi ha scelto dispari.</p>
+            <p>Io sarò il tuo sfidante, scegli un numero e scommetti su come sarà la somma finale. <br> Vediamo chi vince!</p>
+        </article>
+        <div class="evenodd-check">
+            <label for="number">Scegli un numero da 1 a 5: </label>
+            <input type="number" id="number" min="1" max="5">
+            <button id="btn-even" class="btn">Pari</button>
+            <button id="btn-odd" class="btn">Dispari</button>
+            <div id="output-choice"></div>
+            <button id="check-odd-even" class="btn">Controlla</button>
+            <div id="output-number"></div>
+        </div>
+    </div>
     
     <!-- script -->
     <script src="js/script.js"></script>

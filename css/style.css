@@ -16,7 +16,27 @@
     padding: .5em 1em;
     border: none;
     border-radius: .5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    width: 100px;
 }
+
+.spacer{
+    background-color: #fff;
+    height: 2px;
+    border-radius: 1px;
+    margin-top: 3em;
+    margin-bottom: 4em;
+}
+
+.win{
+    color: #09cb09;
+}
+
+.lose{
+    color: red;
+}
+
 /* /Assets */
 
 
@@ -60,4 +80,13 @@ article.description p:last-child{
 
 .pali-check #output-pali {
     margin-top: 1em;
+}
+
+.evenodd-check #number{
+    padding: .5em 1em;
+    border-radius: .5em;
+}
+
+.evenodd-check #check-odd-even{
+    margin: 1em 0;
 }

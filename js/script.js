@@ -112,14 +112,15 @@ btnCheckOddEvenEl.addEventListener('click', function(){
     // ? SE: l'utente ha scelto pari e la somma è pari
     if(even==true && checkEvenOdd(sum)==true){
         // °V1: Stampa che ha vinto l'utente
-        outputOddEvenEl.innerText = `Hai scelto ${parseInt(inputNumberEl.value)}, il pc ha scelto ${pcNum}, la somma è ${sum}, quindi hai vinto!`;
+        outputOddEvenEl.innerHTML = `Hai scelto ${parseInt(inputNumberEl.value)}, il pc ha scelto ${pcNum}, la somma è ${sum}, quindi <span class="win">hai vinto!</span>`;
     } else if(even==false && checkEvenOdd(sum)==false){
         // °V1: Stampa che ha vinto l'utente
-        outputOddEvenEl.innerText = `Hai scelto ${parseInt(inputNumberEl.value)}, il pc ha scelto ${pcNum}, la somma è ${sum}, quindi hai vinto!`;
+        outputOddEvenEl.innerHTML = `Hai scelto ${parseInt(inputNumberEl.value)}, il pc ha scelto ${pcNum}, la somma è ${sum}, quindi <span class="win">hai vinto!</span>`;
     } else {
         // °F1: Stampa che ha vinto il PC;
-        outputOddEvenEl.innerText = `Hai scelto ${parseInt(inputNumberEl.value)}, il pc ha scelto ${pcNum}, la somma è ${sum}, quindi hai perso :(`;
+        outputOddEvenEl.innerHTML = `Hai scelto ${parseInt(inputNumberEl.value)}, il pc ha scelto ${pcNum}, la somma è ${sum}, quindi <span class="lose">hai perso :(</span>`;
     }
+
 });
 
 
