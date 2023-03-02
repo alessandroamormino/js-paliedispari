@@ -71,7 +71,10 @@ const outputOddEvenEl = document.getElementById('output-number');
 
 // PALINDROMA
 btnEl.addEventListener('click', function(){
-    if(checkPali(inputWordEl.value)){
+    if(inputWordEl.value==''){
+        outputEl.innerText = 'Devi inserire qualcosa..';
+        outputEl.style.color = 'red';
+    }else if(checkPali(inputWordEl.value)){
         outputEl.innerText = 'È palindroma!';
         outputEl.style.color = '#09cb09';
     } else{
