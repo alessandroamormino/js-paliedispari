@@ -5,15 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pali e Dispari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <input type="text" id="word">
-    <button id="check-pali">Controlla</button>
-    <div id="output-pali"></div>
 
-    <hr>
+    <h1>Giochini carini</h1>
+    
+    <div class="pali-container container-centered">
+        <h2>Parole Palindrome</h2>
+        <article class="description">
+            <p>Il palindromo è una sequenza di lettere o di sillabe che possa essere letta anche in senso retrogrado dando come esito o la sequenza di partenza o un'altra sequenza pure dotata di senso.</p>
+            <p>Inserisci una parola qui sotto per controllare se essa è una parola palindroma!</p>
+        </article>
+        <div class="pali-check">
+            <input type="text" id="word">
+            <button id="check-pali">Controlla</button>
+            <div id="output-pali"></div>
+        </div>
+    </div>
+
 
     <input type="number" id="number" min="1" max="5">
     <button id="btn-even">Pari</button>
